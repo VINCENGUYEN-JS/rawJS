@@ -1,0 +1,25 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#root {
+  background: black;
+  overflow: scroll;
+}
+
+h1 {
+  color: darkorange;
+}
+
+p {
+  color: white;
+}
+
+article {
+  width: 300px;
+  margin: 32px auto;
+  background: lightgray;
+  border-radius: 6px;
+  padding: 16px;
+}
