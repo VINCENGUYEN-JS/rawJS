@@ -55,6 +55,15 @@ for (let resizer of resizers) {
         el.style.width = rect.width - (e.clientX - prevX) + "px";
         el.style.height = rect.height + (e.clientY - prevY) + "px";
         el.style.left = rect.left + (e.clientX - prevX) + "px";
+      } else if (currentResizer.classList.contains("ne")) {
+        el.style.width = rect.width + (e.clientX - prevX) + "px";
+        el.style.height = rect.height - (e.clientY - prevY) + "px";
+        el.style.top = rect.top + (e.clientY - prevY) + "px";
+      } else if (currentResizer.classList.contains("nw")) {
+        el.style.width = rect.width - (e.clientX - prevX) + "px";
+        el.style.height = rect.height - (e.clientY - prevY) + "px";
+        el.style.left = rect.left + (e.clientX - prevX) + "px";
+        el.style.top = rect.top + (e.clientY - prevY) + "px";
       }
 
       prevX = e.clientX;
