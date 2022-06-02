@@ -27,7 +27,7 @@ button {
   height: 100%;
   z-index: 1;
   overflow: auto;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: flex-start;
 }
