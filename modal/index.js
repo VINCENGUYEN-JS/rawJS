@@ -11,17 +11,22 @@ modalCloseBtn.addEventListener("click", (event) => {
 });
 
 modal.addEventListener("click", (event) => {
-  if (event.target.classList.contain("modal")) {
+  if (event.target.classList.contains("modal")) {
     toggleModal();
   }
 });
 
 function toggleModal() {
   if (getComputedStyle(modal).display === "flex") {
-    modal.style.display = "none";
-    document.body.style.overflow = "initial";
+    modal.classList.add("modal-hide");
+    setTimeout(() => {
+      modal.style.display = "none";
+      modal.classList.remove("modal-show", "modal-hide");
+      document.body.style.overflow = "initial";
+    }, 200);
   } else {
     modal.style.display = "flex";
+    modal.classList.add("modal-show");
     document.body.style.overflow = "hidden";
   }
 }

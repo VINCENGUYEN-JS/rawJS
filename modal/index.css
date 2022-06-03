@@ -32,6 +32,14 @@ button {
   align-items: flex-start;
 }
 
+.modal.modal-show {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.modal.modal-hide {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
 .modal-content {
   position: relative;
   background-color: #fff;
@@ -47,6 +55,14 @@ button {
 .modal-content h1 {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.modal.modal-show .modal-content {
+  animation: fadeInDown 0.5s ease-in-out forwards;
+}
+
+.modal.modal-hide .modal-content {
+  animation: fadeOutUp 0.5s ease-in-out forwards;
 }
 
 .modal-content p {
@@ -69,4 +85,46 @@ button {
 .modal-close:hover,
 .modal-close:focus {
   color: rgba(0, 0, 0, 0.5);
+}
+
+/** Animation */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
 }
