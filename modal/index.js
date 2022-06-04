@@ -1,22 +1,38 @@
-const modalTriggerButton = document.querySelector("button");
-const modal = document.querySelector(".modal");
-const modalCloseBtn = document.querySelector(".modal-close");
+const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+const modals = document.querySelectorAll(".modal");
+const modalCloseBtns = document.querySelectorAll(".modal-close");
 
-modalTriggerButton.addEventListener("click", (event) => {
-  toggleModal();
+modalTriggerButtons.forEach((btn) =>
+  btn.addEventListener("click", (event) => {
+    toggleModal(event.target.getAttribute("data-modal-target"));
+  })
+);
+
+modalCloseBtns.forEach((btnClose) => {
+  btnClose.addEventListener("click", (event) => {
+    const modal = event.target.closest(".modal");
+    const modalId = modal.getAttribute("id");
+    toggleModal(modalId);
+  });
 });
 
-modalCloseBtn.addEventListener("click", (event) => {
-  toggleModal();
+modals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    console.log({ currentTarget: event.target });
+    if (event.target.classList.contains("modal")) {
+      toggleModal(event.target.id);
+    }
+  });
 });
 
-modal.addEventListener("click", (event) => {
-  if (event.target.classList.contains("modal")) {
-    toggleModal();
+document.addEventListener("keydown", (event) => {
+  if (event.keyCode === 27 && document.querySelector(".modal.modal-show")) {
+    toggleModal(document.querySelector(".modal.modal-show").id);
   }
 });
 
-function toggleModal() {
+function toggleModal(id) {
+  const modal = document.querySelector(`#${id}`);
   if (getComputedStyle(modal).display === "flex") {
     modal.classList.add("modal-hide");
     setTimeout(() => {
