@@ -44,12 +44,25 @@ h1 {
 }
 
 .accordion-item-header::after {
-  content: "\002B";
+  content: "\25BE";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
+  transition: transform 0.2 ease-in-out;
 }
 
 .accordion-item-header.active::after {
-  content: "\2212";
+  /* content: "\2212"; */
+  transform: rotate(-180deg);
+}
+
+.accordion-item-body {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid #000;
+  display: none;
+}
+
+.accordion-item-header.active + .accordion-item-body {
+  display: block;
 }
