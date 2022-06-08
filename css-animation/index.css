@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+.blue {
+  background-color: blue;
+  transition-property: background-color, width;
+  transition-duration: 3s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+}
+
+.blue:hover {
+  width: 200px;
+  background-color: brown;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.menu li {
+  display: inline-block;
+  position: relative;
+}
+
+.menu li::after {
+  width: 0;
+  height: 4px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 2s ease-in-out;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
