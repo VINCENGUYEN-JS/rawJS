@@ -10,10 +10,38 @@
 
 .blue {
   background-color: blue;
-  transition-property: background-color, width;
+  /* transition-property: background-color, width;
   transition-duration: 3s;
   transition-delay: 0s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
+  position: relative;
+  animation-name: loadingABC, move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loadingABC {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: yellow;
+    width: 300px;
+  }
+  100% {
+    background-color: brown;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: 20px;
+  }
 }
 
 .blue:hover {
@@ -43,4 +71,21 @@
 
 .menu li:hover::after {
   width: 100%;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  border-top-color: red;
+  border-right-color: burlywood;
+  border-bottom-color: chartreuse;
+  border-radius: 50%;
+  animation: circle-loading 1s infinite linear;
+}
+
+@keyframes circle-loading {
+  to {
+    transform: rotate(360deg);
+  }
 }
