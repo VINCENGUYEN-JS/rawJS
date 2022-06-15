@@ -58,7 +58,7 @@ button {
 }
 
 .modal.modal-show .modal-content {
-  animation: fadeInDown 0.5s ease-in-out forwards;
+  animation: fadeInDown 10s ease-in-out forwards;
 }
 
 .modal.modal-hide .modal-content {
