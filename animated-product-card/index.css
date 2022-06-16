@@ -19,7 +19,7 @@ body {
   max-width: 355px;
   border-radius: 25px;
   padding: 20px 30px 30px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -84,6 +84,12 @@ body {
   align-items: center;
 }
 
+.color-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .color-price .color-option .color {
   font-size: 18px;
   font-weight: 500;
@@ -91,12 +97,51 @@ body {
   margin-right: 8px;
 }
 
-.color-option .circle {
+.color-option .circles {
   display: flex;
 }
 
 .color-option .circles .circle {
   height: 18px;
   width: 18px;
+  border-radius: 50%;
   background: #0071c7;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.color-option .circles .circle.pink {
+  background-color: #fa1795;
+}
+
+.color-option .circles .circle.pink.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #fa1795;
+}
+
+.color-option .circles .circle.yellow {
+  background-color: #f5da00;
+}
+
+.color-option .circles .circle.yellow.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f5da00;
+}
+
+.color-option .circles .circle.blue.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0071c7;
+}
+
+.color-price .price {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-price .price .price_num {
+  font-size: 25px;
+  font-weight: 600px;
+}
+
+.color-price .price .price_letter {
+  font-size: 10px;
+  font-weight: 600px;
+  color: #707070;
 }
