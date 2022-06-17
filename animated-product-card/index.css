@@ -12,6 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(135deg, #43cbff, #9708cc);
 }
 
 .product-card {
@@ -20,6 +21,8 @@ body {
   border-radius: 25px;
   padding: 20px 30px 30px 30px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  z-index: 3;
   overflow: hidden;
 }
 
@@ -59,6 +62,12 @@ body {
   position: absolute;
   top: -40px;
   z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5 ease;
+}
+
+.product-card .main-images img.active {
+  opacity: 1;
 }
 
 .product-card .shoe-details .shoe_name {
