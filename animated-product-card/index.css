@@ -154,3 +154,25 @@ body {
   font-weight: 600px;
   color: #707070;
 }
+
+.product-card .button {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(135deg, #43cbff, #9708cc);
+  border-radius: 25px;
+  margin-top: 30px;
+}
+
+.product-card .button button {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
