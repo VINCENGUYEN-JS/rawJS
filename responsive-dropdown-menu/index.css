@@ -51,12 +51,15 @@ nav .nav-bar .nav-links li .arrow {
   color: #fff;
   line-height: 70px;
   transition: all 0.5s ease;
-  display: inline-block;
 }
 
 nav .nav-bar .nav-links li:hover .html-css,
 nav .nav-bar .nav-links li:hover .js {
   transform: rotate(180deg);
+}
+
+nav .nav-bar .nav-links li.more:hover .more-arrow {
+  transform: rotate(90deg);
 }
 
 .nav-bar .nav-links .links .sub-menu {
@@ -66,6 +69,14 @@ nav .nav-bar .nav-links li:hover .js {
   background: #3e8da8;
   line-height: 40px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.nav-bar .nav-links .links .more .sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
 }
 
 .nav-bar .nav-links .links .sub-menu li {
@@ -77,4 +88,10 @@ nav .nav-bar .nav-links li:hover .js {
   font-size: 15px;
   color: #fff;
   font-weight: 500;
+}
+
+.nav-bar .nav-links .links li:hover .html-css-sub-menu,
+.nav-bar .nav-links .links li:hover .js-sub-menu,
+.nav-bar .nav-links .links li.more:hover .sub-menu {
+  display: block;
 }
