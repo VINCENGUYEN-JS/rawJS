@@ -53,12 +53,42 @@ body {
   line-height: 1;
   font-family: "Rubik", sans-serif;
   color: #4f5665;
+  font-weight: 400;
 }
 
+.header {
+  padding-top: 50px;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header-auth {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+.header-signin {
+  font-weight: 500;
+  color: #0b132a;
+}
+.header-signup {
+  font-weight: 500;
+  color: #f53838;
+  padding: 13px 45px;
+  border: 0.47px solid #f53838;
+  border-radius: 23.4913px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+}
+.menu-link {
+  color: inherit;
 }
 
 /*# sourceMappingURL=app.css.map */
